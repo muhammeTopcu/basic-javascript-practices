@@ -73,27 +73,62 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+let max = sayilar[0];
+let min = sayilar[0];
 
+for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] > max) {
+    max = sayilar[i];
+  }
+  if (sayilar[i] < min) {
+    min = sayilar[i];
+  }
+}
 /* kodlar buraya */
 
 // 3b çözümü:
-
+sayilar.forEach((sayi) => {
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+});
 /* kodlar buraya */
 
 // 3c çözümü:
-
+ucebolunenlerintoplami = ucetambolunenler.reduce(
+  (toplam, sayi) => toplam + sayi,
+  0
+);
 /* kodlar buraya */
 
 // 3d çözümü
-
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 /* kodlar buraya */
 
 // 3e çözümü
+siralisayilar = [...besyuzdenkucuksayilar].sort((a, b) => a - b);
 
 /* kodlar buraya */
 
 // 3f çözümü
 
+const tekrarSayilari = {}; // Sayıların kaç kere tekrar ettiğini tutacak nesne
+for (let i = 0; i < sayilar.length; i++) {
+  const sayi = sayilar[i];
+  if (tekrarSayilari[sayi]) {
+    tekrarSayilari[sayi]++;
+  } else {
+    tekrarSayilari[sayi] = 1;
+  }
+}
+
+for (const sayi in tekrarSayilari) {
+  if (tekrarSayilari[sayi] > 1) {
+    tekraredensayilar.push(
+      `${sayi} sayısı ${tekrarSayilari[sayi]} kere tekrar edilmiştir`
+    );
+  }
+}
 /* kodlar buraya */
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
