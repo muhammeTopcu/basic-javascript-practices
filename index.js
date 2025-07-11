@@ -12,8 +12,8 @@ const pi = 3.14159;
 function kareninAlani(kenaruzunlugu) {
   return kenaruzunlugu * kenaruzunlugu;
 }
-
 /* (Oto test yok) Yukarıdaki kareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+console.log(kareninAlani(10));
 
 /* GÖREV 1:
 - cemberinCevresi fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
@@ -23,9 +23,10 @@ function kareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function cemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function cemberinCevresi(cemberinCevresi) {
+  return 2 * pi * cemberinCevresi;
 }
+console.log(cemberinCevresi(5));
 
 /* (Oto test yok) Yukarıdaki cemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
